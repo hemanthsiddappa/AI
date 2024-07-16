@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Home App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            display: flex;
+            gap: 20px;
+        }
+        .screen {
+            width: 300px;
+            height: 600px;
+            background: linear-gradient(to top, #222, #666);
+            border-radius: 20px;
+            padding: 20px;
+            color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .screen img {
+            width: 100%;
+            border-radius: 20px;
+        }
+        .screen h2 {
+            margin: 20px 0 10px;
+            font-size: 24px;
+        }
+        .screen p {
+            margin: 5px 0;
+        }
+        .screen .login, .screen .control, .screen .overview {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .login input, .login button {
+            margin: 10px 0;
+            padding: 10px;
+            width: 80%;
+            border: none;
+            border-radius: 5px;
+        }
+        .login button {
+            background-color: #ff9800;
+            color: white;
+            cursor: pointer;
+        }
+        .control .slider {
+            width: 80%;
+            margin: 20px 0;
+        }
+        .overview .rooms, .overview .routines, .overview .devices {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .overview .room, .overview .routine, .overview .device {
+            background-color: #333;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 10px;
+            width: 80%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="screen">
+            <div class="control">
+                <h2>Pinterest Black Ceiling Fan</h2>
+                <p>Bedroom</p>
+                <input type="range" min="1" max="20" value="12" class="slider">
+                <div>
+                    <button>Low</button>
+                    <button>High</button>
+                </div>
+            </div>
+        </div>
+        <div class="screen">
+            <div class="login">
+                <h2>SMART HOME</h2>
+                <p>Sign into Manage Your Device & Accessory</p>
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="Password">
+                <button>Log In</button>
+                <a href="#">Create an account</a>
+            </div>
+        </div>
+        <div class="screen">
+            <div class="overview">
+                <div class="temp-humidity">
+                    <p>22°C Avg House Temp</p>
+                    <p>30°C Outside Temp</p>
+                    <p>60% Humidity</p>
+                    <p>3 Devices on</p>
+                </div>
+                <div class="rooms">
+                    <div class="room">Master Bedroom</div>
+                    <div class="room">Bedroom</div>
+                    <div class="room">Kids Room</div>
+                    <div class="room">Drawing Room</div>
+                </div>
+                <div class="routines">
+                    <div class="routine">Morning</div>
+                    <div class="routine">Night</div>
+                </div>
+                <div class="devices">
+                    <div class="device">Recently Using Device</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
